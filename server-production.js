@@ -13,6 +13,8 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+ app.set('trust proxy', true);
+
 // 環境変数
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
 const SUPABASE_URL = process.env.SUPABASE_URL;
